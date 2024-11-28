@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to my portfolio homepage.">
+    <meta name="description" content="Welcome to my professional portfolio.">
     <title>Home | My Portfolio</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="scripts/main.js"></script>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -22,7 +23,13 @@
     <main>
         <section id="hero">
             <h1>Welcome to My Portfolio</h1>
-            <p>Explore my journey, skills, and projects.</p>
+            <p>Discover my projects, skills, and how to get in touch with me.</p>
+            <button class="scroll-btn" onclick="scrollToSection('about')">Learn More</button>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I’m a passionate developer who loves building creative and efficient solutions. My expertise lies in web development, coding, and solving real-world problems with technology.</p>
         </section>
     </main>
 

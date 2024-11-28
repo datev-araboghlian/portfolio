@@ -28,32 +28,26 @@ header ul li a {
     font-weight: bold;
 }
 
-#contact-page {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-}
-
 form {
     display: flex;
     flex-direction: column;
+    max-width: 500px;
+    margin: 50px auto;
 }
 
 form input,
 form textarea {
     margin-bottom: 10px;
     padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
 form button {
     background: #6a11cb;
     color: white;
-    padding: 10px;
     border: none;
+    padding: 10px;
     border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
 }

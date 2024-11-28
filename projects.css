@@ -28,27 +28,16 @@ header ul li a {
     font-weight: bold;
 }
 
-#projects {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
-    text-align: center;
-}
-
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    padding: 20px;
 }
 
 .project {
+    background: #f4f4f4;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 10px;
     text-align: center;
-}
-
-.project h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
 }
