@@ -1,53 +1,306 @@
-body {
-    font-family: 'Roboto', sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    color: #333;
-}
-
-header {
-    background: #333;
-    color: white;
-    padding: 10px 0;
-}
-
-header ul {
-    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%; /* Assure que le body occupe toute la hauteur de l'écran */
+  }
+  
+  body {
     display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-header ul li {
-    margin: 0 15px;
-}
-
-header ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-form {
+    flex-direction: column; /* Permet à l'élément body de se diviser en 2 parties */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F0E2C8;
+  }
+  
+  main {
+    flex: 1; /* Prend toute la place restante */
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    margin: 50px auto;
-}
-
-form input,
-form textarea {
-    margin-bottom: 10px;
+    justify-content: flex-start;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
     padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: auto; /* Assure que le footer soit poussé vers le bas */
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .nav-left ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-left ul li a {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-weight: bold;
+  }
+  
+  .nav-left ul li a:hover {
+    color: #f8b400;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .nav-right input[type="text"] {
+    padding: 5px 10px;
     border-radius: 5px;
+    border: 1px solid #f8b400;
+    outline: none;
+  }
+  
+  /* Hamburger button */
+  .hamburger {
+    display: none; /* Caché par défaut */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* Menu toggle (checkbox) */
+  .menu-toggle {
+    display: none; /* Assurez-vous que la checkbox ne soit pas visible */
+    z-index: 10;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Intro Section */
+  .intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .intro img {
+    width: auto;
+    height: auto;
+  }
+  
+  .intro h1 {
+    font-size: 3.5em;
+    color: #333;
+    font-family: Montserrat;
+    font-weight: bold;
+  }
+  
+  /* Contact Form Section */
+  .contact-form {
+    background-color: #f0f4f8;
+    padding: 50px 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  .form-wrapper {
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+  }
+  
+  p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .form-group.full-width {
+    flex-direction: column;
+  }
+  
+  input, textarea {
+    flex: 1;
+    padding: 10px;
     border: 1px solid #ccc;
-}
-
-form button {
-    background: #6a11cb;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4285f4;
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 5px;
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #357ae8;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .icon {
+    color: #4285f4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: #357ae8;
+  }
+  
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 10px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-text p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    color: #ccc;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    /* Display hamburger button and menu toggle on tablet */
+    .hamburger {
+      display: flex; /* Affiche le hamburger sur tablette */
+    }
+  
+    .nav-left ul {
+      display: none; /* Cache le menu par défaut */
+      list-style-type: none;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .menu-toggle:checked + .hamburger + .menu {
+      display: flex; /* Affiche le menu quand le bouton hamburger est activé */
+    }
+  
+    .nav-right {
+      display: none; /* Cache la barre de recherche sur tablette */
+    }
+  
+    .intro h1 {
+      font-size: 2.5em;
+    }
+  
+    .intro img {
+      width: 60px;
+    }
+  
+    .container {
+      padding: 15px;
+    }
+  
+    .form-group {
+      flex-direction: column;
+    }
+  
+    .social-icons {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .intro h1 {
+      font-size: 2em;
+    }
+  
+    .intro img {
+      width: 50px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    .social-icons {
+      gap: 6px;
+    }
+  }

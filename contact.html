@@ -3,42 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact me for collaborations or inquiries.">
-    <title>Contact | My Portfolio</title>
+    <title>Contactez-Nous</title>
     <link rel="stylesheet" href="contact.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
+
+<!-- Top Navigation Bar -->
+<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </label>
+            <ul class="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="projects.html">Contact</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+        <div class="nav-right">
+            <input type="text" placeholder="Search">
+        </div>
+    </nav>
+</header>
 
-    <main>
-        <section id="contact">
-            <h1>Contact Me</h1>
-            <form action="https://formsubmit.co/your-email@example.com" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+<!-- Intro Section -->
+<section class="intro">
+    <img src="./img_match/Logo.png" alt="Logo des Milwaukee Bucks" aria-label="Logo des Milwaukee Bucks">
+    <h1>Contactez-Nous</h1>
+    <img src="./img_match/Logo.png" alt="Logo des Milwaukee Bucks" aria-label="Logo des Milwaukee Bucks">
+</section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Send</button>
+<!-- Contact Us Section -->
+<section class="contact-form">
+    <div class="container">
+        <div class="form-wrapper">
+            <h2>Get in Touch</h2>
+            <p>Ask us anything you want.</p>
+            <!-- Form with mailto -->
+            <form action="mailto:araboghliandatev@gmail.com" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <input type="text" name="First Name" placeholder="First Name" required>
+                    <input type="text" name="Last Name" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="Email" placeholder="Email" required>
+                    <input type="tel" name="Phone" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group full-width">
+                    <textarea name="Message" placeholder="What do you have in mind" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
             </form>
-        </section>
-    </main>
+            <div class="social-icons">
+                <a href="https://twitter.com/Bucks" class="icon">Twitter</a>
+                <a href="https://facebook.com/MilwaukeeBucks" class="icon">Facebook</a>
+                <a href="https://www.nba.com/bucks/" class="icon">Google</a>
+                <a href="https://instagram.com/milwaukeebucks" class="icon">Instagram</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>© 2024 My Portfolio</p>
-    </footer>
+<!-- Footer -->
+<footer>
+    <div class="footer-text">
+        <p>&copy; 2024 Milwaukee Bucks | Tous droits réservés.</p>
+    </div>
+</footer>
+
 </body>
 </html>
