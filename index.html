@@ -6,35 +6,43 @@
     <meta name="description" content="Welcome to my professional portfolio.">
     <title>Home | My Portfolio</title>
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script defer src="scripts/main.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
+<!-- Top Navigation Bar -->
+<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </label>
+            <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+        <div class="nav-right">
+            <input type="text" placeholder="Search">
+        </div>
+    </nav>
+</header>
 
     <main>
-        <section id="hero">
+        <section id="hero" class="container">
             <h1>Welcome to My Portfolio</h1>
-            <p>Discover my projects, skills, and how to get in touch with me.</p>
-            <button class="scroll-btn" onclick="scrollToSection('about')">Learn More</button>
-        </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I’m a passionate developer who loves building creative and efficient solutions. My expertise lies in web development, coding, and solving real-world problems with technology.</p>
+            <p>Explore my projects, skills, and achievements as a web developer.</p>
+            <button onclick="window.location.href='projects.html'">View My Projects</button>
         </section>
     </main>
 
-    <footer>
-        <p>© 2024 My Portfolio</p>
-    </footer>
+    <!-- Footer -->
+<footer>
+    <div class="footer-text">
+        <p>&copy; 2024 Milwaukee Bucks | Tous droits réservés.</p>
+    </div>
+</footer>
 </body>
 </html>

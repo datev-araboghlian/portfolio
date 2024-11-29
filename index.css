@@ -5,29 +5,76 @@ body {
     color: #333;
 }
 
-header {
-    background: #333;
-    color: white;
-    padding: 10px 0;
-}
-
-header ul {
-    list-style: none;
+ /* Navbar Styling */
+ .navbar {
     display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-header ul li {
-    margin: 0 15px;
-}
-
-header ul li a {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
     color: white;
+    font-size: 25px;
+  }
+  
+  .nav-left ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-left ul li a {
     text-decoration: none;
+    color: #f9f9f9;
     font-weight: bold;
-}
-
+  }
+  
+  .nav-left ul li a:hover {
+    color: #f8b400;
+  }
+  
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .nav-right input[type="text"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #f8b400;
+    outline: none;
+  }
+  
+  /* Hamburger button */
+  .hamburger {
+    display: none; /* Caché par défaut */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  /* Menu toggle (checkbox) */
+  .menu-toggle {
+    display: none; /* Assurez-vous que la checkbox ne soit pas visible */
+    z-index: 10;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
 #hero {
     background: linear-gradient(to bottom right, #6a11cb, #2575fc);
     color: white;
@@ -48,10 +95,22 @@ header ul li a {
     padding: 50px;
     text-align: center;
 }
+/* Footer */
 footer {
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #333;
     color: #fff;
-    margin-top: auto;
-}
+    padding: 20px 10px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-text p {
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    color: #ccc;
+  }
+  
