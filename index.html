@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to my professional portfolio.">
     <title>Home | My Portfolio</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 <!-- Top Navigation Bar -->
@@ -33,15 +33,23 @@
     <main>
         <section id="hero" class="container">
             <h1>Welcome to My Portfolio</h1>
-            <p>Explore my projects, skills, and achievements as a web developer.</p>
-            <button onclick="window.location.href='projects.html'">View My Projects</button>
+            <p class="lead">Hi, I'm a Web Developer passionate about creating beautiful and functional websites.</p>
+            <div class="cta-buttons">
+                <button onclick="window.location.href='projects.html'" class="primary">View My Projects</button>
+                <button onclick="window.location.href='contact.html'" class="secondary">Contact Me</button>
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>I specialize in building modern web applications using the latest technologies. My focus is on creating intuitive and responsive user experiences.</p>
         </section>
     </main>
 
     <!-- Footer -->
 <footer>
     <div class="footer-text">
-        <p>&copy; 2024 Milwaukee Bucks | Tous droits réservés.</p>
+        <p>&copy; 2024 My Portfolio | All rights reserved.</p>
     </div>
 </footer>
 </body>
