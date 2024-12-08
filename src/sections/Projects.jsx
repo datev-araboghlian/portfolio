@@ -85,22 +85,9 @@ const Projects = () => {
               href={currentProject.href} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="
-                flex items-center justify-center 
-                bg-black-100 text-white 
-                px-4 py-2 rounded-lg 
-                cursor-pointer 
-                group hover:bg-black-300 
-                transition-colors 
-                w-full
-              "
+              className="text-white hover:underline"
             >
-              <img 
-                src="/assets/github.svg" 
-                alt="GitHub" 
-                className="w-4 h-4 mr-2 group-hover:rotate-6 transition-transform pointer-events-none" 
-              />
-              View Project
+              View Project on GitHub
             </a>
           </div>
 
