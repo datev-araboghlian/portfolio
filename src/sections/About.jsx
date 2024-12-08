@@ -28,7 +28,7 @@ const About = () => {
             </div>
 
             <div>
-              <p className="grid-headtext">Hi, I’m Datev Araboghlian</p>
+              <p className="grid-headtext">Hi, I'm Datev Araboghlian</p>
               <p className="grid-subtext">
                 With 3 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
                 and responsive websites.
@@ -36,7 +36,7 @@ const About = () => {
               <div className="flex flex-col items-center">
                 <div className="flex items-center space-x-2">
                   <img src="/globe.svg" alt="Globe" className="w-6 h-6" />
-                  <p className="text-white-500">Marseille, France</p>
+                  <p className="text-white-500">Exploring Global Tech Opportunities</p>
                 </div>
               </div>
             </div>
@@ -73,8 +73,8 @@ const About = () => {
               />
             </div>
             <div>
-              <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
-              <p className="grid-subtext">I&apos;m based in Marseille, France and open to remote work worldwide.</p>
+              <p className="grid-headtext">I'm very flexible with time zone communications & locations</p>
+              <p className="grid-subtext">Currently based in Marseille, France, I'm open to remote work worldwide.</p>
               <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
             </div>
           </div>
@@ -87,8 +87,8 @@ const About = () => {
             <div>
               <p className="grid-headtext">My Passion for Coding</p>
               <p className="grid-subtext">
-                I love solving problems and building things through code. Programming isn&apos;t just my
-                profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
+                I love solving problems and building things through code. Programming isn't just my
+                profession—it's my passion. I enjoy exploring new technologies, and enhancing my skills.
               </p>
             </div>
           </div>
