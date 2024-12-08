@@ -84,9 +84,8 @@ const Projects = () => {
             <div className="flex items-center gap-2">
               <button 
                 onClick={() => {
-                  if (currentProject.href) {
-                    window.open(currentProject.href, '_blank');
-                  }
+                  console.log('Project href:', currentProject.href);
+                  window.location.href = currentProject.href;
                 }}
                 className="
                   flex items-center justify-center 
