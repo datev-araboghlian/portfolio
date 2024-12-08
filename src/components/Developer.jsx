@@ -63,7 +63,13 @@ const Developer = ({ animationName = 'idle', ...props }) => {
         geometry={nodes.Wolf3D_Outfit_Top.geometry}
         material={materials.Wolf3D_Outfit_Top}
         skeleton={nodes.Wolf3D_Outfit_Top.skeleton}
-      />
+      >
+        <meshStandardMaterial 
+          color="#2c3e50" 
+          opacity={1} 
+          transparent={false} 
+        />
+      </skinnedMesh>
       <skinnedMesh
         name="EyeLeft"
         geometry={nodes.EyeLeft.geometry}
