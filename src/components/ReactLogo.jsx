@@ -8,31 +8,13 @@
 
 import React from 'react';
 import { Float } from '@react-three/drei';
-import * as THREE from 'three';
 
 const DLogo = (props) => {
   return (
     <Float floatIntensity={1}>
-      <group position={[8, 8, 0]} scale={0.5} {...props} dispose={null}>
+      <group position={[8, 8, 0]} scale={0.5} {...props}>
         <mesh>
-          <extrudeGeometry 
-            args={[
-              new THREE.Shape([
-                new THREE.Vector2(0, 0),
-                new THREE.Vector2(0, 1),
-                new THREE.Vector2(0.5, 1),
-                new THREE.Vector2(0.7, 0.8),
-                new THREE.Vector2(0.7, 0.2),
-                new THREE.Vector2(0.5, 0),
-              ]), 
-              { 
-                depth: 0.2, 
-                bevelEnabled: true, 
-                bevelThickness: 0.05, 
-                bevelSize: 0.05 
-              }
-            ]} 
-          />
+          <boxGeometry args={[0.5, 1, 0.1]} />
           <meshStandardMaterial color="white" />
         </mesh>
       </group>
