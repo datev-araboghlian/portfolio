@@ -40,7 +40,7 @@ export const clientReviews = [
   },
   {
     id: 3,
-    name: 'Lisa',
+    name: 'Steve',
     position: 'Digital Marketing Manager',
     img: 'assets/review3.png',
     review:
