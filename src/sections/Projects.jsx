@@ -1,7 +1,7 @@
 import React from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { Suspense, useState, useCallback } from 'react';
+import { Suspense, useState, useCallback, useRef, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Center, OrbitControls } from '@react-three/drei';
 
@@ -13,6 +13,7 @@ const projectCount = myProjects.length;
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const videoRef = useRef(null);
 
   const handleNavigation = useCallback((direction) => {
     setSelectedProjectIndex((prevIndex) => {
@@ -23,6 +24,26 @@ const Projects = () => {
       }
     });
   }, []);
+
+  useEffect(() => {
+    // Prevent default video behavior on mobile
+    const preventFullscreen = (e) => {
+      e.preventDefault();
+    };
+
+    const currentVideo = videoRef.current;
+    if (currentVideo) {
+      currentVideo.addEventListener('webkitfullscreenchange', preventFullscreen);
+      currentVideo.addEventListener('fullscreenchange', preventFullscreen);
+    }
+
+    return () => {
+      if (currentVideo) {
+        currentVideo.removeEventListener('webkitfullscreenchange', preventFullscreen);
+        currentVideo.removeEventListener('fullscreenchange', preventFullscreen);
+      }
+    };
+  }, [selectedProjectIndex]);
 
   useGSAP(() => {
     gsap.fromTo(`.animatedText`, { opacity: 0 }, { opacity: 1, duration: 1, stagger: 0.2, ease: 'power2.inOut' });
@@ -109,7 +130,10 @@ const Projects = () => {
             <Center>
               <Suspense fallback={<CanvasLoader />}>
                 <group key={selectedProjectIndex} scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                  <DemoComputer texture={currentProject.texture} />
+                  <DemoComputer 
+                    ref={videoRef}
+                    texture={currentProject.texture} 
+                  />
                 </group>
               </Suspense>
             </Center>
