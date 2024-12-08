@@ -65,9 +65,12 @@ const Developer = ({ animationName = 'idle', ...props }) => {
         skeleton={nodes.Wolf3D_Outfit_Top.skeleton}
       >
         <meshStandardMaterial 
-          color="#2c3e50" 
-          opacity={1} 
-          transparent={false} 
+          color="#3a4f5e" 
+          roughness={0.6} 
+          metalness={0.1} 
+          aoMapIntensity={0.5}
+          envMapIntensity={0.3}
+          normalScale={[0.5, 0.5]}
         />
       </skinnedMesh>
       <skinnedMesh
