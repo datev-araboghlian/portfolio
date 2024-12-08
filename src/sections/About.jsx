@@ -33,12 +33,6 @@ const About = () => {
                 With 3 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
                 and responsive websites.
               </p>
-              <div className="flex flex-col items-center">
-                <div className="flex items-center space-x-2">
-                  <img src="/globe.svg" alt="Globe" className="w-6 h-6" />
-                  <p className="text-white-500">Exploring Global Tech Opportunities</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
