@@ -1,3 +1,4 @@
+import React from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Suspense, useState } from 'react';
@@ -21,6 +22,10 @@ const Projects = () => {
         return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
       }
     });
+  };
+
+  const handleOpenProject = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   useGSAP(() => {
@@ -59,14 +64,31 @@ const Projects = () => {
               ))}
             </div>
 
-            <a
-              className="flex items-center gap-2 cursor-pointer text-white-600"
-              href={currentProject.href}
-              target="_blank"
-              rel="noreferrer">
-              <p>Check Live Site</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
-            </a>
+            <div className="flex items-center gap-2">
+              <div 
+                onClick={() => handleOpenProject(currentProject.href)}
+                className="
+                  flex items-center justify-center 
+                  bg-blue-600 hover:bg-blue-500 
+                  text-white text-xs 
+                  px-3 py-2 
+                  rounded-md 
+                  transition-all duration-300 
+                  hover:shadow-lg
+                  active:scale-95
+                  group
+                  cursor-pointer
+                  w-full
+                "
+              >
+                <img 
+                  src="/assets/github.svg" 
+                  alt="GitHub" 
+                  className="w-4 h-4 mr-2 group-hover:rotate-6 transition-transform pointer-events-none" 
+                />
+                View Project
+              </div>
+            </div>
           </div>
 
           <div className="flex justify-between items-center mt-7">

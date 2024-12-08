@@ -1,13 +1,12 @@
 import { useState } from 'react';
-import Globe from 'react-globe.gl';
-
-import Button from '../components/Button.jsx';
+import Button from '../components/Button';
+import Globe from '../components/Globe';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(' adrian@jsmastery.pro');
+    navigator.clipboard.writeText('araboghliandatev@gmail.com');
     setHasCopied(true);
 
     setTimeout(() => {
@@ -20,12 +19,18 @@ const About = () => {
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
+            <div className="w-full sm:h-[276px] h-fit bg-[#1c1c1c] rounded-xl flex justify-center items-center">
+              <img 
+                src="/assets/profile.png" 
+                alt="Datev Arab Oghlian" 
+                className="w-48 h-48 object-cover rounded-full" 
+              />
+            </div>
 
             <div>
-              <p className="grid-headtext">Hi, I’m Adrian Hajdin</p>
+              <p className="grid-headtext">Hi, I’m Datev Arab Oghlian</p>
               <p className="grid-subtext">
-                With 12 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
+                With 3 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
                 and responsive websites.
               </p>
             </div>
@@ -95,7 +100,7 @@ const About = () => {
               <p className="grid-subtext text-center">Contact me</p>
               <div className="copy-container" onClick={handleCopy}>
                 <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
-                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">adrian@jsmastery.pro</p>
+                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">araboghliandatev@gmail.com</p>
               </div>
             </div>
           </div>

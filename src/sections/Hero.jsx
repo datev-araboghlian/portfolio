@@ -2,7 +2,7 @@ import { Leva } from 'leva';
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useMediaQuery } from 'react-responsive';
-import { PerspectiveCamera } from '@react-three/drei';
+import { PerspectiveCamera, OrbitControls } from '@react-three/drei';
 
 import Cube from '../components/Cube.jsx';
 import Rings from '../components/Rings.jsx';
@@ -24,13 +24,6 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
-        <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
-          Hi, I am Adrian <span className="waving-hand">👋</span>
-        </p>
-        <p className="hero_tag text-gray_gradient">Building Products & Brands</p>
-      </div>
-
       <div className="w-full h-full absolute inset-0">
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
@@ -51,8 +44,30 @@ const Hero = () => {
 
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
+            
+            {/* Add OrbitControls for dragging */}
+            <OrbitControls 
+              enableZoom={false}
+              enablePan={false}
+              enableRotate={true}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={-Math.PI / 2}
+            />
           </Suspense>
         </Canvas>
+      </div>
+
+      <div className="w-full mx-auto flex flex-col justify-center items-center sm:mt-20 mt-10 c-space gap-5 relative z-10">
+        <div className="flex flex-col items-center text-center">
+          <p className="sm:text-3xl text-xl font-medium text-white font-generalsans mb-2">
+            Hi, I am Datev <span className="waving-hand">👋</span>
+          </p>
+          <p className="hero_tag text-gray_gradient">
+            Building Creative Digital Solutions
+          </p>
+        </div>
+
+        {/* Removed the profile image div */}
       </div>
 
       <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
