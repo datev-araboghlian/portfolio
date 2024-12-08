@@ -81,14 +81,27 @@ const Projects = () => {
               ))}
             </div>
 
-            <a 
-              href={currentProject.href} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white hover:underline"
-            >
-              View Project on GitHub
-            </a>
+            <div className="flex items-center gap-2">
+              <div 
+                onClick={() => window.open(currentProject.href, '_blank')}
+                className="
+                  flex items-center justify-center 
+                  bg-black-100 text-white 
+                  px-4 py-2 rounded-lg 
+                  cursor-pointer 
+                  group hover:bg-black-300 
+                  transition-colors 
+                  w-full
+                "
+              >
+                <img 
+                  src="/assets/github.svg" 
+                  alt="GitHub" 
+                  className="w-4 h-4 mr-2 group-hover:rotate-6 transition-transform pointer-events-none" 
+                />
+                View Project
+              </div>
+            </div>
           </div>
 
           <div className="flex justify-between items-center mt-7">
