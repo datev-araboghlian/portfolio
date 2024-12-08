@@ -73,6 +73,29 @@ const Developer = ({ animationName = 'idle', ...props }) => {
           envMapIntensity={0.3}
           normalScale={[0.5, 0.5]}
         />
+        <Decal 
+          position={[0, 0.2, 0.1]} 
+          rotation={[0, Math.PI, 0]} 
+          scale={0.3}
+          debug
+        >
+          <meshStandardMaterial 
+            color="white" 
+            transparent 
+            opacity={1} 
+            polygonOffset 
+            polygonOffsetFactor={-1}
+          >
+            <Text 
+              fontSize={0.2} 
+              color="black" 
+              anchorX="center" 
+              anchorY="middle"
+            >
+              DebugDatev
+            </Text>
+          </meshStandardMaterial>
+        </Decal>
       </skinnedMesh>
       <skinnedMesh
         name="EyeLeft"
