@@ -8,14 +8,17 @@
 
 import React from 'react';
 import { Float } from '@react-three/drei';
+import { useTexture } from '@react-three/drei';
 
 const DLogo = (props) => {
+  const texture = useTexture('/assets/D.png');
+
   return (
     <Float floatIntensity={1}>
       <group position={[8, 8, 0]} scale={0.5} {...props}>
         <mesh>
-          <boxGeometry args={[0.5, 1, 0.1]} />
-          <meshStandardMaterial color="white" />
+          <planeGeometry args={[1, 1]} />
+          <meshBasicMaterial map={texture} transparent />
         </mesh>
       </group>
     </Float>
