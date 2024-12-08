@@ -85,7 +85,7 @@ const Projects = () => {
               <button 
                 onClick={() => {
                   console.log('Project href:', currentProject.href);
-                  window.location.href = currentProject.href;
+                  window.open(currentProject.href, '_blank');
                 }}
                 className="
                   flex items-center justify-center 
