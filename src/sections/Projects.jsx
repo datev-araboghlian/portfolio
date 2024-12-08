@@ -1,7 +1,7 @@
 import React from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { Suspense, useState } from 'react';
+import { Suspense, useState, useCallback } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Center, OrbitControls } from '@react-three/drei';
 
@@ -14,7 +14,7 @@ const projectCount = myProjects.length;
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
 
-  const handleNavigation = (direction) => {
+  const handleNavigation = useCallback((direction) => {
     setSelectedProjectIndex((prevIndex) => {
       if (direction === 'previous') {
         return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
@@ -22,11 +22,7 @@ const Projects = () => {
         return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
       }
     });
-  };
-
-  const handleOpenProject = (url) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
+  }, []);
 
   useGSAP(() => {
     gsap.fromTo(`.animatedText`, { opacity: 0 }, { opacity: 1, duration: 1, stagger: 0.2, ease: 'power2.inOut' });
@@ -88,11 +84,19 @@ const Projects = () => {
           </div>
 
           <div className="flex justify-between items-center mt-7">
-            <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
+            <button 
+              className="arrow-btn" 
+              onClick={() => handleNavigation('previous')}
+              aria-label="Previous Project"
+            >
               <img src="/assets/left-arrow.png" alt="left arrow" />
             </button>
 
-            <button className="arrow-btn" onClick={() => handleNavigation('next')}>
+            <button 
+              className="arrow-btn" 
+              onClick={() => handleNavigation('next')}
+              aria-label="Next Project"
+            >
               <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
             </button>
           </div>
@@ -104,12 +108,16 @@ const Projects = () => {
             <directionalLight position={[10, 10, 5]} />
             <Center>
               <Suspense fallback={<CanvasLoader />}>
-                <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
+                <group key={selectedProjectIndex} scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
                   <DemoComputer texture={currentProject.texture} />
                 </group>
               </Suspense>
             </Center>
-            <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+            <OrbitControls 
+              maxPolarAngle={Math.PI / 2} 
+              enableZoom={false} 
+              enablePan={false}
+            />
           </Canvas>
         </div>
       </div>
