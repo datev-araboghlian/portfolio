@@ -24,7 +24,7 @@ export const navLinks = [
 export const clientReviews = [
   {
     id: 1,
-    name: 'Sarah Chen',
+    name: 'Sarah',
     position: 'Small Business Owner',
     img: 'assets/review1.png',
     review:
@@ -32,7 +32,7 @@ export const clientReviews = [
   },
   {
     id: 2,
-    name: 'Michael Torres',
+    name: 'Michael',
     position: 'Startup Founder',
     img: 'assets/review2.png',
     review:
@@ -40,7 +40,7 @@ export const clientReviews = [
   },
   {
     id: 3,
-    name: 'Lisa Anderson',
+    name: 'Lisa',
     position: 'Digital Marketing Manager',
     img: 'assets/review3.png',
     review:

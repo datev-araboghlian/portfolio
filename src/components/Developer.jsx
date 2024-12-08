@@ -73,31 +73,6 @@ const Developer = ({ animationName = 'idle', ...props }) => {
           envMapIntensity={0.3}
           normalScale={[0.5, 0.5]}
         />
-        <Decal 
-          position={[0, 0.3, 0.05]} 
-          rotation={[0, Math.PI, 0]} 
-          scale={[0.4, 0.2, 0.2]}
-          debug={false}
-        >
-          <meshStandardMaterial 
-            color="#ffffff" 
-            opacity={0.8} 
-            transparent={true}
-          >
-            <Text 
-              color="#000000"
-              fontSize={0.2}
-              maxWidth={2}
-              lineHeight={1}
-              letterSpacing={0.02}
-              textAlign="center"
-              anchorX="center"
-              anchorY="middle"
-            >
-              DebugDatev
-            </Text>
-          </meshStandardMaterial>
-        </Decal>
       </skinnedMesh>
       <skinnedMesh
         name="EyeLeft"

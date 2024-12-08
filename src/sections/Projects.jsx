@@ -81,27 +81,27 @@ const Projects = () => {
               ))}
             </div>
 
-            <div className="flex items-center gap-2">
-              <div 
-                onClick={() => window.open(currentProject.link, '_blank', 'noopener,noreferrer')}
-                className="
-                  flex items-center justify-center 
-                  bg-black-100 text-white 
-                  px-4 py-2 rounded-lg 
-                  cursor-pointer 
-                  group hover:bg-black-300 
-                  transition-colors 
-                  w-full
-                "
-              >
-                <img 
-                  src="/assets/github.svg" 
-                  alt="GitHub" 
-                  className="w-4 h-4 mr-2 group-hover:rotate-6 transition-transform pointer-events-none" 
-                />
-                View Project
-              </div>
-            </div>
+            <a 
+              href={currentProject.href} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="
+                flex items-center justify-center 
+                bg-black-100 text-white 
+                px-4 py-2 rounded-lg 
+                cursor-pointer 
+                group hover:bg-black-300 
+                transition-colors 
+                w-full
+              "
+            >
+              <img 
+                src="/assets/github.svg" 
+                alt="GitHub" 
+                className="w-4 h-4 mr-2 group-hover:rotate-6 transition-transform pointer-events-none" 
+              />
+              View Project
+            </a>
           </div>
 
           <div className="flex justify-between items-center mt-7">
