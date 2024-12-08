@@ -66,18 +66,14 @@ const Projects = () => {
 
             <div className="flex items-center gap-2">
               <div 
-                onClick={() => handleOpenProject(currentProject.href)}
+                onClick={() => window.open(currentProject.link, '_blank', 'noopener,noreferrer')}
                 className="
                   flex items-center justify-center 
-                  bg-blue-600 hover:bg-blue-500 
-                  text-white text-xs 
-                  px-3 py-2 
-                  rounded-md 
-                  transition-all duration-300 
-                  hover:shadow-lg
-                  active:scale-95
-                  group
-                  cursor-pointer
+                  bg-black-100 text-white 
+                  px-4 py-2 rounded-lg 
+                  cursor-pointer 
+                  group hover:bg-black-300 
+                  transition-colors 
                   w-full
                 "
               >

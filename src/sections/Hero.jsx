@@ -57,7 +57,7 @@ const Hero = () => {
         </Canvas>
       </div>
 
-      <div className="w-full mx-auto flex flex-col justify-center items-center sm:mt-20 mt-10 c-space gap-5 relative z-10">
+      <div className="w-full mx-auto flex flex-col justify-center items-center sm:mt-20 mt-10 pt-20 c-space gap-5 relative z-10">
         <div className="flex flex-col items-center text-center">
           <p className="sm:text-3xl text-xl font-medium text-white font-generalsans mb-2">
             Hi, I am Datev <span className="waving-hand">👋</span>
