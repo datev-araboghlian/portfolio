@@ -82,10 +82,12 @@ const Projects = () => {
             </div>
 
             <div className="flex items-center gap-2">
-              <a 
-                href={currentProject.href}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button 
+                onClick={() => {
+                  if (currentProject.href) {
+                    window.open(currentProject.href, '_blank');
+                  }
+                }}
                 className="
                   flex items-center justify-center 
                   bg-black-100 text-white 
@@ -102,7 +104,7 @@ const Projects = () => {
                   className="w-4 h-4 mr-2 group-hover:rotate-6 transition-transform pointer-events-none" 
                 />
                 View Project
-              </a>
+              </button>
             </div>
           </div>
 
