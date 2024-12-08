@@ -12,8 +12,8 @@ const Contact = () => {
           className="absolute inset-0 min-h-screen z-[-1] object-cover" 
         />
 
-        <div className="contact-container bg-black-100 p-8 rounded-xl shadow-lg max-w-md w-full">
-          <h3 className="head-text text-white mb-6">Let's Connect</h3>
+        <div className="contact-container bg-black-100 p-4 sm:p-8 rounded-xl shadow-lg max-w-md w-[95%] sm:w-full">
+          <h3 className="head-text text-white mb-4 sm:mb-6 text-center">Let's Connect</h3>
           
           {status && (
             <div 

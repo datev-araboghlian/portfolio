@@ -16,7 +16,7 @@ const Footer = () => {
         </a>
       </div>
 
-      <p className="text-white-500"> 2024 Datev Arab Oghlian. All rights reserved.</p>
+      <p className="text-white-500"> 2024 Datev Araboghlian. All rights reserved.</p>
     </footer>
   );
 };

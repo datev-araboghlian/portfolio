@@ -22,17 +22,23 @@ const About = () => {
             <div className="w-full sm:h-[276px] h-fit bg-[#1c1c1c] rounded-xl flex justify-center items-center">
               <img 
                 src="/assets/profile.png" 
-                alt="Datev Arab Oghlian" 
+                alt="Datev Araboghlian" 
                 className="w-48 h-48 object-cover rounded-full" 
               />
             </div>
 
             <div>
-              <p className="grid-headtext">Hi, I’m Datev Arab Oghlian</p>
+              <p className="grid-headtext">Hi, I’m Datev Araboghlian</p>
               <p className="grid-subtext">
                 With 3 years of experience, I have honed my skills in both frontend and backend dev, creating dynamic
                 and responsive websites.
               </p>
+              <div className="flex flex-col items-center">
+                <div className="flex items-center space-x-2">
+                  <img src="/globe.svg" alt="Globe" className="w-6 h-6" />
+                  <p className="text-white-500">Marseille, France</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
