@@ -6,6 +6,7 @@ import { useRef, useEffect, useState } from 'react';
 import { useGLTF, useAnimations, useVideoTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { useFrame } from '@react-three/fiber';
 
 const DemoComputer = (props) => {
   const group = useRef();
@@ -66,6 +67,10 @@ const DemoComputer = (props) => {
       ease: 'power3.out',
     });
   }, [txt]);
+
+  useFrame((state, delta) => {
+    // Original rotation logic or nothing (remove random rotation)
+  });
 
   return (
     <group ref={group} {...props} dispose={null}>

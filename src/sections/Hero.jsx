@@ -2,7 +2,8 @@ import { Leva } from 'leva';
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useMediaQuery } from 'react-responsive';
-import { PerspectiveCamera, OrbitControls } from '@react-three/drei';
+import { PerspectiveCamera } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei'; // Import OrbitControls
 
 import Cube from '../components/Cube.jsx';
 import Rings from '../components/Rings.jsx';
@@ -45,14 +46,14 @@ const Hero = () => {
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
             
-            {/* Add OrbitControls for dragging */}
-            <OrbitControls 
+            {/* Remove OrbitControls to disable dragging */}
+            {/* <OrbitControls 
               enableZoom={false}
               enablePan={false}
               enableRotate={true}
               maxPolarAngle={Math.PI / 2}
               minPolarAngle={-Math.PI / 2}
-            />
+            /> */}
           </Suspense>
         </Canvas>
       </div>

@@ -12,6 +12,9 @@ const GlobeComponent = ({
   bumpImageUrl = '//unpkg.com/three-globe/example/img/earth-topology.png',
   labelsData = [{ lat: 40, lng: -100, text: 'Rjieka, Croatia', color: 'white', size: 15 }]
 }) => {
+
+  console.log('Rendering Globe with image URL:', globeImageUrl);
+
   return (
     <Globe
       height={height}
@@ -23,6 +26,7 @@ const GlobeComponent = ({
       globeImageUrl={globeImageUrl}
       bumpImageUrl={bumpImageUrl}
       labelsData={labelsData}
+      style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }} // Fallback color
     />
   );
 };
